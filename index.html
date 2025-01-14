@@ -1,11 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Mi Feed de Fotos de Instagram con Bootstrap</title>
 </head>
+
 <body>
-    
+
+    <nav class="navbar bg-light py-3">
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center">
+                <div class="col-2">
+                    <i class="fa-brands fa-2x fa-instagram"></i>
+                </div>
+                <div class="col-4">
+                    <h3>Instagram</h3>
+                </div>
+            </div>
+            <form class="d-flex" role="search">
+                <button class="btn btn-success" type="submit">Create a new post</button>
+                <!-- Example single danger button -->
+                <div class="btn-group mx-2">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu list dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+
+    <nav>
+        <div class="nav nav-tabs justify-content-center m-5" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i
+                    class="fa-solid fa-table-cells"></i></button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i
+                    class="fa-solid fa-square"></i></button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <!-- Fotos en cuadrícula -->
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+            tabindex="0">
+            <div class="row pt-4 pb-1 my-3 px-2"> <!-- Primer renglon de Fotos en 3 columnas -->
+                <div class="col-4">
+                    <div class="ratio ratio-4x3"> <!-- Ajusta el tamaño de la imagen a un alto y ancho fijo -->
+                        <img src="https://cdn.pixabay.com/photo/2010/12/06/22/fighter-jets-1008_1280.jpg"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2015/08/13/19/39/children-887393_1280.jpg"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2022/04/06/12/41/landscape-7115513_960_720.jpg"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-1 my-3 px-2"> <!-- Segundo renglon de Fotos en 3 columnas -->
+                <div class="col-4">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2021/08/01/12/58/beach-6514331_960_720.jpg"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2023/04/29/09/51/polana-kalatowki-7958161_1280.jpg"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2017/01/21/01/14/woman-1996283_1280.jpg"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-1 px-2"> <!-- Tercer renglon de Fotos en 3 columnas -->
+                <div class="col-4">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2015/01/15/13/06/woman-600238_960_720.jpg"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2015/05/23/16/59/homestead-780767_960_720.jpg"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2017/07/13/14/44/moto-2500657_960_720.jpg"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Fotos en Vertical-->
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <div class="nav flex-column justify-content-center align-items-center nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <div class="card px-0 my-4" style="width: 30rem;">
+                    <div class="row d-flex">
+                        <div class="col-10 my-3 ps-4 h3">
+                            My Crazy dog Spark!
+                        </div>
+                        <div class="col-2 mt-2 pe-4 text-end">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2010/12/06/22/fighter-jets-1008_1280.jpg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body px-2">
+                        <p class="card-text m-0"><strong>204 Likes</strong></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="card px-0 my-4" style="width: 30rem;">
+                    <div class="row d-flex">
+                        <div class="col-10 my-3 ps-4 h3">
+                            My Crazy dog Spark!
+                        </div>
+                        <div class="col-2 mt-2 pe-4 text-end">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2015/08/13/19/39/children-887393_1280.jpg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body px-2">
+                        <p class="card-text m-0"><strong>204 Likes</strong></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="card px-0 my-4" style="width: 30rem;">
+                    <div class="row d-flex">
+                        <div class="col-10 my-3 ps-4 h3">
+                            My Crazy dog Spark!
+                        </div>
+                        <div class="col-2 mt-2 pe-4 text-end">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2022/04/06/12/41/landscape-7115513_960_720.jpg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body px-2">
+                        <p class="card-text m-0"><strong>204 Likes</strong></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="card px-0 my-4" style="width: 30rem;">
+                    <div class="row d-flex">
+                        <div class="col-10 my-3 ps-4 h3">
+                            My Crazy dog Spark!
+                        </div>
+                        <div class="col-2 mt-2 pe-4 text-end">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2021/08/01/12/58/beach-6514331_960_720.jpg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body px-2">
+                        <p class="card-text m-0"><strong>204 Likes</strong></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="card px-0 my-4" style="width: 30rem;">
+                    <div class="row d-flex">
+                        <div class="col-10 my-3 ps-4 h3">
+                            My Crazy dog Spark!
+                        </div>
+                        <div class="col-2 mt-2 pe-4 text-end">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2023/04/29/09/51/polana-kalatowki-7958161_1280.jpg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body px-2">
+                        <p class="card-text m-0"><strong>204 Likes</strong></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="card px-0 my-4" style="width: 30rem;">
+                    <div class="row d-flex">
+                        <div class="col-10 my-3 ps-4 h3">
+                            My Crazy dog Spark!
+                        </div>
+                        <div class="col-2 mt-2 pe-4 text-end">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2017/01/21/01/14/woman-1996283_1280.jpg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body px-2">
+                        <p class="card-text m-0"><strong>204 Likes</strong></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="card px-0 my-4" style="width: 30rem;">
+                    <div class="row d-flex">
+                        <div class="col-10 my-3 ps-4 h3">
+                            My Crazy dog Spark!
+                        </div>
+                        <div class="col-2 mt-2 pe-4 text-end">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2015/01/15/13/06/woman-600238_960_720.jpg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body px-2">
+                        <p class="card-text m-0"><strong>204 Likes</strong></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="card px-0 my-4" style="width: 30rem;">
+                    <div class="row d-flex">
+                        <div class="col-10 my-3 ps-4 h3">
+                            My Crazy dog Spark!
+                        </div>
+                        <div class="col-2 mt-2 pe-4 text-end">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2015/05/23/16/59/homestead-780767_960_720.jpg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body px-2">
+                        <p class="card-text m-0"><strong>204 Likes</strong></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="card px-0 my-4" style="width: 30rem;">
+                    <div class="row d-flex">
+                        <div class="col-10 my-3 ps-4 h3">
+                            My Crazy dog Spark!
+                        </div>
+                        <div class="col-2 mt-2 pe-4 text-end">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <img src="https://cdn.pixabay.com/photo/2017/07/13/14/44/moto-2500657_960_720.jpg"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body px-2">
+                        <p class="card-text m-0"><strong>204 Likes</strong></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f2beac05d4.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
